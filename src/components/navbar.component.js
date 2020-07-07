@@ -1,22 +1,28 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Nav, Navbar } from 'react-bootstrap';
+import React from "react";
+import styled from "styled-components";
+import { Nav, Navbar, Container } from "react-bootstrap";
 
-const Styles = styled.div`
-
+const ClearNavbar = styled(Navbar)`
+  padding: 20px 0 0 0;
 `;
 
 export const NavigationBar = () => {
-    return (
-        <Navbar expand="lg">
-        <Navbar.Brand href="/">Nathan Barry</Navbar.Brand>
-        <Navbar.Toggle aria-controls='basic-navbar-nav' />
-        <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='ml-auto'>
-              <Nav.Item><Nav.Link href='/'>Home</Nav.Link></Nav.Item>
-              <Nav.Item><Nav.Link href='/book-list'>Book List</Nav.Link></Nav.Item>
+  return (
+    <Container>
+      <ClearNavbar expand="xl">
+        <ClearNavbar.Brand href="/">Nathan Barry</ClearNavbar.Brand>
+        <ClearNavbar.Toggle aria-controls="basic-navbar-nav" />
+        <ClearNavbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Item>
+              <Nav.Link href="/">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/book-list">Book List</Nav.Link>
+            </Nav.Item>
           </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    )
-}
+        </ClearNavbar.Collapse>
+      </ClearNavbar>
+    </Container>
+  );
+};
